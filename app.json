@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AppDenuncia",
-    "slug": "AppDenuncia",
+    "name": "Aplicativo Pecuaria",
+    "slug": "Aplicativo Pecuaria",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

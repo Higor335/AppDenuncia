@@ -24,7 +24,6 @@ import RichTextBox from '../../components/RichTextBox';
 import NumericUpDown from '../../components/NumericUpDown';
 import AppButton from '../../components/AppButton';
 import ComboBox from '../../components/ComboBox';
-import ReportData from '../../model/ReportData';
 
 
 export default class CidadaoScreen extends ScreenBase{
@@ -79,7 +78,7 @@ export default class CidadaoScreen extends ScreenBase{
         <View style={main.centered} >
 
             <RichTextBox text='Descreva a situação da pessoa' 
-              placeHolder='O cidadão está embriagado e incomodando outros moradores.'
+              placeHolder='Place holder.'
               onChangeText={(text) => this.setState({ description : text})} />
 
             <NumericUpDown text='Peso aproximado (kg)' 

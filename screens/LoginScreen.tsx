@@ -111,7 +111,7 @@ export default class LoginScreen extends React.Component<Props> {
 
           <AppButton text='Fazer Login' onPress={onLogInPressed}/>
 
-          <TouchableOpacity onPress={() => {this.props.navigation.navigate('Root', { screen: 'RegisterScreen' })}}>
+          <TouchableOpacity onPress={() => {this.props.navigation.navigate('RegisterScreen')}}>
             <Text style={{ alignSelf:'center', margin: 15, color: "#1177d1"}}>Criar uma conta</Text>
           </TouchableOpacity>
           

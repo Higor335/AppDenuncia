@@ -12,6 +12,12 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#e0dee6",
+
+  },
+  buttonText:{
+    color:"white",
+    fontFamily: "poppins",
+    fontSize: 16
   },
 
   centeredprofile: {
