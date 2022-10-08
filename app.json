@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Aplicativo Pecuaria",
-    "slug": "Aplicativo Pecuaria",
+    "slug": "AppPecuaria",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
