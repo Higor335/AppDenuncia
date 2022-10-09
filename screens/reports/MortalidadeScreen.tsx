@@ -29,7 +29,7 @@ export default class NascimentoScreen extends ScreenBase{
             piquete: '',
             nome_mae: '',
 
-            items_sexo: [ 'Masculino', 'Feminino' ]
+            items_sexo: [ 'Masculino', 'Feminino']
         }
     }
 
@@ -40,16 +40,19 @@ export default class NascimentoScreen extends ScreenBase{
             let data = Timestamp.fromDate( new Date());
             let loc = await findLocation();
             let localizacao = new GeoPoint(loc.coords.latitude, loc.coords.longitude);
-            //let localizacao = new GeoPoint(50, 5);
+
+
             let sexo = this.state.sexo;
             let peso = this.state.peso;
             let medicamento = this.state.medicamento;
             let brinco = this.state.brinco;
             let piquete = this.state.piquete;
             let nome_mae = this.state.nome_mae;
+            console.log('pre model')
             let nascimentoModel = new NascimentoModel(codigo_usuario, data, localizacao, sexo, peso, medicamento, brinco, piquete, nome_mae)
             console.log(nascimentoModel)
-            const dbRef = collection(db, "nascimento");
+
+            const dbRef = collection(db, "mortabilidade");
             addDoc(dbRef, JSON.parse( JSON.stringify(nascimentoModel)))
             .then(async () => {
                 alertMessage('success', 'Sucesso!', "Sua ocorrência foi enviada com sucesso!");
@@ -69,11 +72,13 @@ export default class NascimentoScreen extends ScreenBase{
                         value={this.state.sexo} 
                         placeHolder= 'Selecione o sexo'
                         items={this.state.items_sexo}
-                        onChangeValue={value => this.setState( {sexo: value } )}/>
+                        onChangeValue={value => {
+                            console.log(value);
+                            this.setState( {sexo: value })}}/>
 
                     <NumericUpDown text="Selecione o peso (kg)"
                         default={120}
-                        onChange={value => this.setState({ peso: value })}
+                        onChange={value => this.setState( { peso: value } )}
                     />
 
                     <RichTextBox 

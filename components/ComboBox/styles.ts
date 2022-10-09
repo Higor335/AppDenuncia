@@ -1,13 +1,16 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  richinput: {
-    marginTop: 15,
-    width: "100%",
-    borderWidth: 1,
-    borderBottomColor: '#c9cbcc',
-    borderRadius: 1,
-    borderColor: 'transparent',
-    color: '#495057',
-  }
+  dropdown1BtnStyle: {
+    width: '80%',
+    height: 35,
+    borderRadius: 8,
+    backgroundColor: 'white',
+    borderWidth: 0.8,
+    borderColor: '#444',
+  },
+  dropdown1BtnTxtStyle: {color: '#444', textAlign: 'left'},
+  dropdown1DropdownStyle: {backgroundColor: '#EFEFEF'},
+  dropdown1RowStyle: {backgroundColor: '#EFEFEF', borderBottomColor: '#C5C5C5'},
+  dropdown1RowTxtStyle: {color: '#444', textAlign: 'left'},
 });

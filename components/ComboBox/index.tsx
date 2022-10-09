@@ -5,8 +5,8 @@ import styles from "./styles";
 import {Text} from '../Themed'
 
 import main from '../../styles/main';
-import NumericInput from "react-native-numeric-input";
-import DropDownPicker from "react-native-dropdown-picker";
+import SelectDropdown from "react-native-select-dropdown";
+import { FontAwesome } from "@expo/vector-icons";
 
 interface Props {
     text: string,
@@ -20,54 +20,37 @@ export default class AppButton extends React.Component<Props>{
 
     constructor(props: any){
         super(props)
-        this.state = {
-            open: false,
-            value: this.props.value,
-            items: this.props.items,
-
-        }
     }
 
     render(): React.ReactNode {
-
-        const { open, sexo, items } = this.state;
-
-        const setOpen = (open) => {
-            this.setState({
-            open
-            });
-        }
-        
-        const setValue = (callback) => {
-            this.setState(state => ({
-                value: callback(state.value)
-            }));
-        }
-        
-        const setItems = (callback) => {
-            this.setState(state => ({
-                items: callback(state.items)
-            }));
-        }
-
         return(
             <View style={[main.card, {marginTop: 20, paddingTop: 24, justifyContent: 'flex-start', alignItems: 'flex-start'}]}>
               <Text style={{color: "#000", fontSize: 16, textAlign: 'left'}}>{this.props.text}</Text>
-              <DropDownPicker style={{
-                width: '100%', alignContent: 'center', borderRadius: 0, borderColor: 'transparent'
+              <SelectDropdown
+                data={this.props.items}
+                onSelect={(selectedItem, index) => this.props.onChangeValue(selectedItem)}
+                buttonTextAfterSelection={(selectedItem, index) => {
+                    // text represented after item is selected
+                    // if data array is an array of objects then return selectedItem.property to render after item is selected
+                    return selectedItem
                 }}
-                placeholder= {this.props.placeHolder}
-                open={open}
-                value={sexo}
-                items={items}
-                setOpen={setOpen}
-                setValue={setValue}
-                setItems={setItems}
-                onChangeValue={() => {
-                    console.log('aaaaa')
-                    console.log(this.state.value);
-                    this.props.onChangeValue(this.props.value);}}
-              />
+                renderDropdownIcon={isOpened => {
+                    return <FontAwesome name={isOpened ? 'chevron-up' : 'chevron-down'} color={'#444'} size={18} />;
+                  }}
+                buttonStyle={styles.dropdown1BtnStyle}
+                buttonTextStyle={styles.dropdown1BtnTxtStyle}
+                dropdownStyle={styles.dropdown1DropdownStyle}
+                rowStyle={styles.dropdown1RowStyle}
+                rowTextStyle={styles.dropdown1RowTxtStyle}
+                dropdownIconPosition={"right"}
+                defaultButtonText={this.props.placeHolder}
+                rowTextForSelection={(item, index) => {
+                    // text represented for each item in dropdown
+                    // if data array is an array of objects then return item.property to represent item in dropdown
+                    return item
+                }}/>
+
+                
             </View>
         )
     }
