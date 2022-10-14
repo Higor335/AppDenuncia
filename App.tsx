@@ -19,6 +19,7 @@ import ReportScreen from './screens/ReportScreen';
 import CidadaoScreen from './screens/reports/CidadaoScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import NascimentoScreen from './screens/reports/NascimentoScreen';
+import MortalidadeScreen from './screens/reports/MortalidadeScreen';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -36,6 +37,9 @@ export default function App() {
             <Stack.Screen component={ReportScreen}    name="ReportScreen" options={{headerShown: true, title: "Novo relatório"}}></Stack.Screen>
 
             <Stack.Screen component={NascimentoScreen}  name="NascimentoScreen" options={{headerShown: true, title: "Novo relatório - Nascimento"}}></Stack.Screen>
+
+            <Stack.Screen component={MortalidadeScreen} name="MortalidadeScreen" options={{headerShown: true,title:
+            "Novo relatório - Mortalidade"}}></Stack.Screen>
 
             <Stack.Screen component={CidadaoScreen}  name="CidadaoScreen" options={{headerShown: true, title: "Nova Denúncia"}}></Stack.Screen>
 
