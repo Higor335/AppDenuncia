@@ -98,7 +98,7 @@ export default StyleSheet.create({
     marginTop:40,
     marginBottom:10
   },
-  buttonText:{
+  buttonText: {
     color:"white",
     fontFamily: "poppins",
     fontSize: 16

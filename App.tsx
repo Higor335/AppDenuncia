@@ -20,6 +20,7 @@ import CidadaoScreen from './screens/reports/CidadaoScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import NascimentoScreen from './screens/reports/NascimentoScreen';
 import MortalidadeScreen from './screens/reports/MortalidadeScreen';
+import NutricaoScreen from './screens/reports/NutricaoScreen';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -32,14 +33,20 @@ export default function App() {
           <Stack.Navigator>
 
             <Stack.Screen component={LoginScreen}     name="LoginScreen" options={{headerShown: false}}></Stack.Screen>
+            
             <Stack.Screen component={UserScreen}      name="UserScreen" options={{headerShown: false}}></Stack.Screen>
+            
             <Stack.Screen component={RegisterScreen}  name="RegisterScreen" options={{headerShown: false}}></Stack.Screen>
+            
             <Stack.Screen component={ReportScreen}    name="ReportScreen" options={{headerShown: true, title: "Novo relatório"}}></Stack.Screen>
 
             <Stack.Screen component={NascimentoScreen}  name="NascimentoScreen" options={{headerShown: true, title: "Novo relatório - Nascimento"}}></Stack.Screen>
 
             <Stack.Screen component={MortalidadeScreen} name="MortalidadeScreen" options={{headerShown: true,title:
             "Novo relatório - Mortalidade"}}></Stack.Screen>
+
+            <Stack.Screen component={NutricaoScreen} name="NutricaoScreen" options={{headerShown: true,title:
+            "Novo relatório - Nutrição"}}></Stack.Screen>
 
             <Stack.Screen component={CidadaoScreen}  name="CidadaoScreen" options={{headerShown: true, title: "Nova Denúncia"}}></Stack.Screen>
 

@@ -52,7 +52,7 @@ export default class NascimentoScreen extends ScreenBase{
             let nascimentoModel = new NascimentoModel(codigo_usuario, data, localizacao, sexo, peso, medicamento, brinco, piquete, nome_mae)
             console.log(nascimentoModel)
 
-            const dbRef = collection(db, "mortabilidade");
+            const dbRef = collection(db, "nascimento");
             addDoc(dbRef, JSON.parse( JSON.stringify(nascimentoModel)))
             .then(async () => {
                 alertMessage('success', 'Sucesso!', "Sua ocorrência foi enviada com sucesso!");
@@ -94,13 +94,13 @@ export default class NascimentoScreen extends ScreenBase{
 
                     <RichTextBox 
                         text= "Digite o piquete"
-                        placeHolder= "Coloque o peiquete"
+                        placeHolder= "coloque o piquete"
                         onChangeText={(value) => {this.setState( { piquete: value } )}}
                     />
 
                     <RichTextBox 
                         text= "Digite o nome do mãe"
-                        placeHolder= "Coloque a mãe"
+                        placeHolder= "insira o nome da mãe"
                         onChangeText={(value) => {this.setState( { nome_mae: value } )}}
                     />
 
