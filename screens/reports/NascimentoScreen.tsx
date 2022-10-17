@@ -87,7 +87,7 @@ export default class NascimentoScreen extends ScreenBase{
                         onChangeText={(value) => {this.setState( { medicamento: value } )}}
                     />
 
-                    <NumericUpDown text="Selecione o número do bezerro"
+                    <NumericUpDown text="Selecione o brinco do bezerro"
                         default={0}
                         onChange={value => this.setState( { brinco: value } )}
                     />

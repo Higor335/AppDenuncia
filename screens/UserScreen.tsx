@@ -118,7 +118,7 @@ export default class UserScreen extends React.Component<Props> {
               <Text style={{color:'#000', fontFamily:'poppins'}}>Você possui </Text>
               <Text style={{color:'#000', fontFamily:'poppins', fontWeight: "bold"}}>{this.state.denuncias}</Text>
               
-              <Text style={{color:'#000', fontFamily:'poppins'}}> denúncias</Text>
+              <Text style={{color:'#000', fontFamily:'poppins'}}> relatórios</Text>
             </Text>
           </View>
           

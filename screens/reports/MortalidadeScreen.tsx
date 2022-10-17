@@ -55,7 +55,7 @@ export default class MortalidadeScreen extends ScreenBase{
             <ScrollView>
                 <View style={main.centered} >
 
-                    <NumericUpDown text="Selecione o número do bezerro"
+                    <NumericUpDown text="Selecione o brinco do bovino"
                         default={0}
                         onChange={value => this.setState( { brinco: value } )}
                     />
@@ -68,7 +68,7 @@ export default class MortalidadeScreen extends ScreenBase{
 
                     <RichTextBox 
                         text= "Digite o nome do mãe"
-                        placeHolder= "Coloque a mãe"
+                        placeHolder= "informe o nome da mãe"
                         onChangeText={(value) => {this.setState( { nome_mae: value } )}}
                     />
 
