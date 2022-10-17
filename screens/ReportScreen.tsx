@@ -17,7 +17,9 @@ export default class ReportScreen extends React.Component<Props> {
       items: [
         {label: 'Nascimento', value: 'NascimentoScreen'},
         {label: 'Mortalidade', value: 'MortalidadeScreen'},
-        {label: 'Nutricao', value: 'NutricaoScreen'}
+        {label: 'Nutrição', value: 'NutricaoScreen'},    
+        {label: 'Análise Invernada', value: 'AnaliseInvernadaScreen'},  
+        {label: 'Ocorrência', value: 'OcorrenciaScreen'}
       ]
     }
   }

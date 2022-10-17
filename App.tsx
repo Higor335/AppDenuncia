@@ -21,6 +21,8 @@ import RegisterScreen from './screens/RegisterScreen';
 import NascimentoScreen from './screens/reports/NascimentoScreen';
 import MortalidadeScreen from './screens/reports/MortalidadeScreen';
 import NutricaoScreen from './screens/reports/NutricaoScreen';
+import AnaliseInvernadaScreen from './screens/reports/AnaliseInvernadaScreen';
+import OcorrenciaScreen from './screens/reports/OcorrenciaScreen';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -47,6 +49,13 @@ export default function App() {
 
             <Stack.Screen component={NutricaoScreen} name="NutricaoScreen" options={{headerShown: true,title:
             "Novo relatório - Nutrição"}}></Stack.Screen>
+
+            <Stack.Screen component={AnaliseInvernadaScreen} name="AnaliseInvernadaScreen" options={{headerShown: true,title:
+            "Novo relatório - Análise invernada"}}></Stack.Screen>
+
+            <Stack.Screen component={OcorrenciaScreen} name="OcorrenciaScreen" options={{headerShown: true,title:
+            "Novo relatório - Ocorrência"}}></Stack.Screen>
+
 
             <Stack.Screen component={CidadaoScreen}  name="CidadaoScreen" options={{headerShown: true, title: "Nova Denúncia"}}></Stack.Screen>
 
